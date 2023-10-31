@@ -1,5 +1,3 @@
-package Programme
-
 // Définir la classe Livre avec les attributs : titre, auteur, annéeDePublication et estEmprunté.
 class Livre(val titre: String, val auteur: String, val annéeDePublication: Int) {
   var estEmprunté: Boolean = false

@@ -1,5 +1,3 @@
-package Programme
-
 import scala.io.Source
 import java.io.PrintWriter
 
@@ -53,7 +51,7 @@ class Bibliothèque {
 
   // Méthode de chargerLivres pour reader le contenu de livres.txt
   def chargerLivres(): Unit = {
-    val lines = Source.fromFile("livres.txt").getLines()
+    val lines = Source.fromFile("src/livres.txt").getLines()
 
     for (line <- lines) {
       val Array(titre, auteur, année, emprunté) = line.split(',')
@@ -67,7 +65,7 @@ class Bibliothèque {
 
   // Méthode de sauvergarderLivres dans livres.txt
   def sauvegarderLivres(): Unit = {
-    val writer = new PrintWriter("livres.txt")
+    val writer = new PrintWriter("src/livres.txt")
 
     for (livre <- listeDeLivres) {
       writer.println(s"${livre.titre},${livre.auteur},${livre.annéeDePublication},${livre.estEmprunté}")
